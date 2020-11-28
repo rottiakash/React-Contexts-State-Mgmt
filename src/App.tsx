@@ -1,16 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import CounterContextProvider from "./Contexts/counter";
 import Display from "./Components/Display";
 import Buttons from "./Components/Buttons";
+import Center from "./HOC/Center";
 
 function App() {
   return (
-    <CounterContextProvider>
-      <Display />
-      <Buttons />
-    </CounterContextProvider>
+    <Center>
+      <CounterContextProvider>
+        <Display />
+        <Buttons />
+      </CounterContextProvider>
+    </Center>
   );
 }
 
